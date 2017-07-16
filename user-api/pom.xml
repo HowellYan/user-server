@@ -12,6 +12,13 @@
     <version>1.0-SNAPSHOT</version>
     <artifactId>user-api</artifactId>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.thrift</groupId>
+            <artifactId>libthrift</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
