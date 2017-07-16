@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: userServer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: false
