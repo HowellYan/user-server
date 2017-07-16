@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>user-api</artifactId>
-
+    <packaging>jar</packaging>
 
     <build>
         <plugins>
@@ -23,7 +23,7 @@
                     <thriftExecutable>/usr/local/Cellar/thrift/0.10.0/bin/thrift</thriftExecutable>
                     <thriftExecutable>D:\install\thrift-0.10.0.exe</thriftExecutable>
                     <!--<thriftExecutable>/home/howell/install/thrift/bin/thrift</thriftExecutable>-->
-                    <thriftSourceRoot>${basedir}/src/main/java/cn/com/alien/user/thrift</thriftSourceRoot>
+                    <thriftSourceRoot>${basedir}/src/main/resources/thrift</thriftSourceRoot>
                     <outputDirectory>${basedir}/src/main/java</outputDirectory>
                 </configuration>
             </plugin>
