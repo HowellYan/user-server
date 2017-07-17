@@ -7,11 +7,14 @@
         <!--<groupId>cn.com.alien</groupId>-->
         <!--<version>1.0-SNAPSHOT</version>-->
     <!--</parent>-->
-    <modelVersion>4.0.0</modelVersion>
     <groupId>cn.com.alien</groupId>
-    <version>1.0-SNAPSHOT</version>
     <artifactId>user-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
     <packaging>jar</packaging>
+
+    <modelVersion>4.0.0</modelVersion>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.thrift</groupId>
