@@ -23,7 +23,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="DB_SYSTEM_USER" mapperName="DB_SYSTEM_USER" domainObjectName="FeeBase"
+        <table tableName="DB_SYSTEM_USER" mapperName="SystemUser" domainObjectName="SystemUserModel"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
