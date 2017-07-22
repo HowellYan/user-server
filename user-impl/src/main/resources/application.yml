@@ -1,2 +1,15 @@
 server:
   port: 9898
+
+myBatis:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+  username: c##howell
+  password: Aa123456
+  maxActive: 250
+  minIdle: 200
+  maxWait: 60
+  timeBetweenEvictionRunsMillis: 6000
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
