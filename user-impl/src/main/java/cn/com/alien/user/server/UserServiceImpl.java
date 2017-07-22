@@ -4,14 +4,20 @@ import cn.com.alien.user.api.UserService;
 import cn.com.alien.user.api.req.UserReq;
 import cn.com.alien.user.api.resp.UserResp;
 import cn.com.alien.user.api.resp.base.BaseResp;
+import cn.com.alien.user.dao.SystemUserDao;
 import org.apache.thrift.TException;
 import org.spring.boot.thrift.server.annotation.ThriftServer;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by Root on 2017/7/16.
  */
 @ThriftServer(value = "/userService")
 public class UserServiceImpl implements UserService.Iface {
+
+    @Autowired
+    private SystemUserDao systemUserDao;
+
     @Override
     public UserResp userLogin(UserReq userReq) throws TException {
         UserResp userResp = new UserResp();

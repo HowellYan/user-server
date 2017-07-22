@@ -5,6 +5,7 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +19,7 @@ import java.util.Properties;
  */
 
 @Configuration
+@MapperScan(basePackages="cn.com.alien")
 @Slf4j
 public class MyBatisConfig {
 

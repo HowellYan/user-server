@@ -19,4 +19,7 @@ public interface SystemUser {
      * @mbg.generated Sat Jul 22 23:25:28 CST 2017
      */
     int insertSelective(SystemUserModel record);
+
+
+
 }
