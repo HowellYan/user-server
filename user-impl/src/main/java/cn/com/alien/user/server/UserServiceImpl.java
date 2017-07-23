@@ -5,9 +5,12 @@ import cn.com.alien.user.api.req.UserReq;
 import cn.com.alien.user.api.resp.UserResp;
 import cn.com.alien.user.api.resp.base.BaseResp;
 import cn.com.alien.user.dao.SystemUserDao;
+import cn.com.alien.user.model.db.SystemUserModel;
 import org.apache.thrift.TException;
 import org.spring.boot.thrift.server.annotation.ThriftServer;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.UUID;
 
 /**
  * Created by Root on 2017/7/16.
@@ -29,6 +32,14 @@ public class UserServiceImpl implements UserService.Iface {
             userResp.setUserName("22");
         }
         System.out.println("in");
+
+        SystemUserModel record = new SystemUserModel();
+        record.setId(UUID.randomUUID().toString());
+        record.setUserId(UUID.randomUUID().toString());
+        record.setUserIdCode("asdfsdf");
+        record.setUserMac("12312312");
+        //systemUserDao.getList(record);
+        systemUserDao.insert(record);
         return userResp;
     }
 
