@@ -6,16 +6,21 @@ import cn.com.alien.user.api.resp.UserResp;
 import cn.com.alien.user.api.resp.base.BaseResp;
 import cn.com.alien.user.dao.SystemUserDao;
 import cn.com.alien.user.model.db.SystemUserModel;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.thrift.TException;
 import org.spring.boot.thrift.server.annotation.ThriftServer;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 /**
  * Created by Root on 2017/7/16.
  */
 @ThriftServer(value = "/userService")
+@Slf4j
 public class UserServiceImpl implements UserService.Iface {
 
     @Autowired
@@ -39,7 +44,8 @@ public class UserServiceImpl implements UserService.Iface {
         record.setUserIdCode("asdfsdf");
         record.setUserMac("12312312");
         //systemUserDao.getList(record);
-        systemUserDao.insert(record);
+        //systemUserDao.insert(record);
+        List<SystemUserModel> list = systemUserDao.getList(record);
         return userResp;
     }
 

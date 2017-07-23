@@ -15,9 +15,11 @@
     <result column="USER_MAC" jdbcType="VARCHAR" property="userMac" />
   </resultMap>
 
-  <select id="getList" resultType="java.util.List"
+  <select id="getList"
+          resultMap="BaseResultMap"
           parameterType="cn.com.alien.user.model.db.SystemUserModel">
-    SELECT * FROM DB_SYSTEM_USER
+    SELECT ID, USER_NAME, USER_PASSWD,
+      USER_ID_CODE, USER_ID, USER_MAC FROM DB_SYSTEM_USER
   </select>
 
   <insert id="insert" parameterType="cn.com.alien.user.model.db.SystemUserModel">
