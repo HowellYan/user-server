@@ -71,7 +71,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.4.3.RELEASE</version>
                 <configuration>
-                    <mainClass>SpringBootApp</mainClass>
+                    <mainClass>cn.com.alien.user.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>
