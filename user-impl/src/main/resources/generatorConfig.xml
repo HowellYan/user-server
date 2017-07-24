@@ -3,27 +3,37 @@
         "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <classPathEntry location="/home/howell/work/git/user-server/config/jar/ojdbc6-12.1.0.1-atlassian-hosted.jar"/>
+    <!--<classPathEntry location="../config/jar/ojdbc6-12.1.0.1-atlassian-hosted.jar"/>-->
+    <classPathEntry location="../config/jar/mysql-connector-java-6.0.6.jar"/>
+    <classPathEntry location="../config/jar/ojdbc6-12.1.0.1-atlassian-hosted.jar"/>
     <context id="oracle">
-        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                        connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
-                        userId="c##howell"
-                        password="Aa123456"
-        >
-        </jdbcConnection>
+        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"-->
+                        <!--connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl"-->
+                        <!--userId="c##howell"-->
+                        <!--password="Aa123456"-->
+        <!--/>-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/ratpack?characterEncoding=UTF-8"
+                        userId="root"
+                        password="123456"
+        />
 
-        <javaModelGenerator targetPackage="cn.com.alien.user" targetProject="/home/howell/work/git/user-server/user-impl/src/main/resources/mapper">
+        <javaModelGenerator targetPackage="cn.com.alien.user" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="cn.com.alien.user" targetProject="/home/howell/work/git/user-server/user-impl/src/main/resources/mapper">
+        <sqlMapGenerator targetPackage="cn.com.alien.user" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.alien.user" targetProject="/home/howell/work/git/user-server/user-impl/src/main/resources/mapper">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.alien.user" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="DB_SYSTEM_USER" mapperName="SystemUser" domainObjectName="SystemUserModel"
+        <table tableName="db_system_user" mapperName="SystemUser" domainObjectName="SystemUserModel"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <table tableName="db_animal" mapperName="Animal" domainObjectName="AnimalModel"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
