@@ -2,10 +2,16 @@ server:
   port: 9898
 
 myBatis:
-  driver: oracle.jdbc.driver.OracleDriver
-  url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
-  username: c##howell
-  password: Aa123456
+  #driver: oracle.jdbc.driver.OracleDriver
+  #url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+  #username: c##howell
+  #password: Aa123456
+
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/ratpack?characterEncoding=UTF-8
+  username: root
+  password: 123456
+
   maxActive: 250
   minIdle: 200
   maxWait: 60
