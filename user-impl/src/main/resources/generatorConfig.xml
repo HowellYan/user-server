@@ -18,24 +18,18 @@
                         password="123456"
         />
 
-        <javaModelGenerator targetPackage="cn.com.alien.user" targetProject="src/main/resources/mapper">
+        <javaModelGenerator targetPackage="cn.com.alien.user.model.db" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <sqlMapGenerator targetPackage="cn.com.alien.user" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.alien.user" targetProject="src/main/resources/mapper">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.alien.user.dao" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="db_system_user" mapperName="SystemUser" domainObjectName="SystemUserModel"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
-        <table tableName="db_animal" mapperName="Animal" domainObjectName="AnimalModel"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
+        <table tableName="db_system_user" mapperName="SystemUser" domainObjectName="SystemUserModel"></table>
+        <table tableName="db_animal" mapperName="Animal" domainObjectName="AnimalModel"></table>
     </context>
 </generatorConfiguration>
